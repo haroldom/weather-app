@@ -1,0 +1,246 @@
+:root {
+    --background-color-day: #ffffff;
+    --background-color-night: #121212;
+    --font-primary-color-day: #121212;
+    --font-primary-color-night: #CECECE;
+    --font-secondary-color-day: #616161;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    transition: background-color .2s;
+}
+
+body.day {
+    background-color: var(--background-color-day);
+}
+
+body.night {
+    background-color: var(--background-color-night);
+}
+
+
+.main-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+    flex-wrap: wrap;
+}
+
+.graphic {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Ubuntu Sans", sans-serif;
+    color: var(--font-primary-color-day);
+}
+
+.graphic__cityName {
+    text-align: center;
+    color: var(--font-primary-color-day);
+    font-size: 64px;
+}
+
+.graphic__sun {
+    align-self: center;
+    top: -50px;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    width: 120%;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    background: linear-gradient(180deg, #F8BE28 0%, rgba(248, 190, 40, 0) 100%);
+}
+
+.graphic__temp__item {
+    line-height: 200px;
+    font-weight: 450;
+    font-size: 200px;
+}
+
+.graphic__conditions {
+    z-index: 2;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-family: "Ubuntu Condensed", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.graphic__country {
+    z-index: 2;
+    font-family: "Inter", sans-serif;
+    font-size: 200px;
+    line-height: 200px;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+.graphic__sunInfo {
+    font-family: "Ubuntu Condensed", sans-serif;
+    font-size: 24px;
+}
+
+.graphic__mid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: min-content;
+    height: min-content;
+}
+
+.graphic__temp {
+    z-index: 2;
+    display: flex;
+    align-items: start;
+}
+
+.graphic__temp.day {
+    color: var(--font-primary-color-day);
+
+}
+
+/* .graphic__temp.night {
+    color: var(--font-primary-color-night);
+} */
+
+
+.graphic__temp__item-symbol {
+    font-family: 'Inter', 'san-serif';
+    font-size: 140px;
+    font-weight: 100;
+}
+
+.graphic__conditions__tempContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.graphic__conditions__tempContainer__tempMin {
+    display: flex;
+}
+
+.graphic__conditions__tempContainer__tempMin__icon {
+    color: #3DA3C3;
+}
+
+.graphic__conditions__tempContainer__tempMax {
+    display: flex;
+}
+
+.graphic__conditions__tempContainer__tempMax__icon {
+    color: #D98625;
+}
+
+.graphic__location {
+    margin-top: 20px;
+}
+
+.graphic__moreInfo {
+    display: flex;
+    font-family: "Ubuntu Condensed", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--font-secondary-color-day);
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.graphic__moreInfo__sunrise {
+    display: flex;
+    gap: 10px;
+    flex: 1 1 50%;
+}
+
+.graphic__moreInfo__sunset {
+    justify-content: end;
+    display: flex;
+    gap: 10px;
+    flex: 1 1 50%;
+}
+
+.graphic__moreInfo__weather {
+    margin-top: 20px;
+    flex: 1 1 100%;
+    text-align: center;
+}
+
+
+.graphic__searcher {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    color: var(--font-secondary-color-day);
+    margin: 20px 0;
+}
+
+.graphic__searcher__input-container__input {
+    padding: 5px;
+    font-family: 'Ubuntu Sans';
+    font-size: 22px;
+    color: var(--font-secondary-color-day);
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.graphic__searcher__input-container::after {
+    content: '';
+    position: relative;
+    display: block;
+    width: 0%;
+    transition: width .2s;
+    height: 1px;
+    background-color: var(--font-primary-color-day);
+}
+
+
+.graphic__searcher__input-container:hover::after {
+    width: 100%;
+    /* Expande el ancho al 100% cuando el input está en foco */
+}
+
+
+/* Details Section */
+.details {
+    color: var(--font-primary-color-day);
+    padding-bottom: 100px;
+    font-family: 'Ubuntu Condensed';
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.details h3 {
+    color: var(--font-secondary-color-day);
+}
+
+.details p {
+    font-weight: 500;
+    font-size: 22px;
+}
+
+@media screen and (min-width: 720px) {
+    .details {
+        padding: 0;
+    }
+}

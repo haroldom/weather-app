@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Ubuntu+Condensed&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <!-- FEATHER ICONS-->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+    <!-- Utilizando BEM -->
+    <div class="main-container">
+        <div class="graphic">
+            <div class="graphic__searcher">
+                <i class="graphic__searcher__icon" data-feather="search"></i>
+                <div class="graphic__searcher__input-container">
+                    <input class="graphic__searcher__input-container__input" type="text"
+                        placeholder="Enter your Location">
+                </div>
+            </div>
+            <div class="graphic__cityName" id="city_name"></div>
+            <div class="graphic__mid">
+                <div class="graphic__sun"></div>
+                <div class="graphic__temp">
+                    <div class="graphic__temp__item" id="temp"></div>
+                    <p class="graphic__temp__item-symbol">°</p>
+                </div>
+                <div class="graphic__conditions">
+                    <div id="date" class="graphic__conditions__date"></div>
+                    <div class="graphic__conditions__tempContainer">
+                        <div class="graphic__conditions__tempContainer__tempMin">
+                            <i class="graphic__conditions__tempContainer__tempMin__icon" data-feather="arrow-down"></i>
+                            <p id="temp_min"></p>
+                        </div>
+                        <div class="graphic__conditions__tempContainer__tempMax">
+                            <i class="graphic__conditions__tempContainer__tempMax__icon" data-feather="arrow-up"></i>
+                            <p id="temp_max"></p>
+                        </div>
+                    </div>
+                </div>
+                <i class="graphic__location" data-feather="map-pin"></i>
+                <div id="country" class="graphic__country"></div>
+            </div>
+            <div class="graphic__moreInfo">
+                <div class="graphic__moreInfo__sunrise">
+                    <i data-feather="sunrise"></i>
+                    <p id="sunrise"></p>
+                </div>
+                <div class="graphic__moreInfo__sunset">
+                    <i data-feather="sunset"></i>
+                    <p id="sunset"></p>
+                </div>
+                <div class="graphic__moreInfo__weather" id="weather"></div>
+            </div>
+        </div>
+        <div class="details">
+            <h2>Details</h2>
+            <div class="details__seaLevel">
+                <h3>Sea Level</h3>
+                <p class="details__seaLevel__value" id="seaLevel"></p>
+            </div>
+            <div class="details__wind">
+                <h3>Wind</h3>
+                <p class="details__wind__value" id="wind"></p>
+            </div>
+            <div class="details__humidity">
+                <h3>Humidity</h3>
+                <p class="details__humidity__value" id="humidity"></p>
+            </div>
+            <div class="details__feels">
+                <h3>Feels Like</h3>
+                <p class="details__feels__value" id="feels"></p>
+            </div>
+            <div class="details__pressure">
+                <h3>Pressure</h3>
+                <p class="details__pressure__value" id="pressure"></p>
+            </div>
+        </div>
+    </div>
+    <!-- <div id="pressure"></div>
+    <div id="humidity"></div> -->
+    <script src="main.js"></script>
+
+
+</body>
+
+</html>
